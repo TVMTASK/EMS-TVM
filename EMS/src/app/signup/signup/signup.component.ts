@@ -28,7 +28,7 @@ this.http.post<any>("http://localhost:3000/signupUsers",this.signupForm.value)
   this.signupForm.reset();
   this.router.navigate(['login']);
 },err=>{
-  alert('something went srong');
+  alert('something went wrong');
 })
 }
 }

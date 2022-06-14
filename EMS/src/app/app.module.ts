@@ -9,12 +9,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CareerComponent } from './career/career.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    CareerComponent
 
   ],
   imports: [
@@ -23,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MatIconModule,MatToolbarModule,
     HttpClientModule,
     ToastrModule.forRoot({
       timeOut: 2000,

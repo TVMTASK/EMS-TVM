@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms'
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import {FormBuilder, FormGroup} from '@angular/forms'
 export class LoginComponent implements OnInit {
 
   public loginForm! : FormGroup
-  constructor(private formBuilder: FormBuilder, private http : HttpClient, private router : Router) { }
+  constructor(private toaster:ToastrService,private formBuilder: FormBuilder, private http : HttpClient, private router : Router) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -29,11 +30,12 @@ return a.email === this.loginForm.value.email  &&  a.password === this.loginForm
 if(user){
   alert('login success');
   this.loginForm.reset();
-
+  this.router.navigate(['career'])
 }else{
   alert('user not found');
 }
 },err=>{
+  this.toaster.error('something went wrong');
   alert('something went wrong');
 })
   }

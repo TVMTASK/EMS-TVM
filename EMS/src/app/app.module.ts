@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MaterialModule} from '../environments/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup/signup.component';
@@ -12,14 +13,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { CareerComponent } from './career/career.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    CareerComponent
-
+    CareerComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserAnimationsModule,
     MatIconModule,MatToolbarModule,
     HttpClientModule,
+    MaterialModule,
     ToastrModule.forRoot({
       timeOut: 2000,
       autoDismiss: true,

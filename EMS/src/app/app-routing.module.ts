@@ -1,3 +1,5 @@
+import { CareerComponent } from './career/career.component';
+import { SignupComponent } from './signup/signup/signup.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from 'src/login/login/login.component';
@@ -6,9 +8,11 @@ import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
  { path: 'login', component: LoginComponent },
- {path:'home',component:HomeComponent},
+ {path: 'signup', component:SignupComponent},
+ {path: 'career', component:CareerComponent},
  {path:'profile',component:ProfileComponent},
- {path:'',pathMatch:'full',redirectTo:'login'},
+ {path:'home',component:HomeComponent},
+  {path:'',pathMatch:'full',redirectTo:'login'}
 ];
 
 @NgModule({

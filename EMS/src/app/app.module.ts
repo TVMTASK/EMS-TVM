@@ -10,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CareerComponent } from './career/career.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeaderComponent } from './header/header.component';
@@ -21,7 +20,6 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     SignupComponent,
     LoginComponent,
-    CareerComponent,
     HeaderComponent,
     HomeComponent
   ],

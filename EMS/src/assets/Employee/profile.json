@@ -1,0 +1,29 @@
+{
+    "basicInfo": [
+      {
+        "employeeID":"AIPL15424",
+        "firstName": "yogarani",
+        "middleName": "",
+        "lastName": "B",
+        "userName":"byogarani",
+        "title":"Senior Engineer - Product and Platform"
+      },
+      {
+        "employeeID":"AIPL15425",
+        "firstName": "Jaya",
+        "middleName": "Sai",
+        "lastName": "R",
+        "userName":"JayaS",
+        "title":"Junior Engineer - Product and Platform"
+      },
+      {
+        "employeeID":"AIPL15426",
+        "firstName": "Chris",
+        "middleName": "Mc",
+        "lastName": "Harris",
+        "userName":"chrisMC",
+        "title":"Manager - Product and Platform"
+      }
+      
+    ]
+  }

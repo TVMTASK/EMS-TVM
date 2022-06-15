@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "fullname": "nandhini",
+      "Mobile Number": "9566279415",
+      "email":"nandhini@gmail.com",
+      "password":"password"
+    },
+    {
+      "id": 3,
+      "fullname": "abi",
+      "Mobile Number": "9551539548",
+      "email":"abi@gmail.com",
+      "password":"abi"
+    },
+    {
+      "id": 4,
+      "fullname": "bhavani",
+      "Mobile Number": "8438434309",
+      "email":"bhavani@gmail.com",
+      "password":"bhavani"
+    },
+    {
+      "id": 5,
+      "fullname": "dhana",
+      "Mobile Number": "956218626",
+      "email":"dhana@gmail.com",
+      "password":"dhana"
+    },
+    {
+      "id": 6,
+      "fullname": "hari",
+      "Mobile Number": "956218626",
+      "email":"hari@gmail.com",
+      "password":"hari"
+    }
+  ]
+}

@@ -1,7 +1,8 @@
+import { ApiService } from './../../app/api.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms'
+import { FormBuilder, FormGroup } from '@angular/forms'
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -11,32 +12,37 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class LoginComponent implements OnInit {
 
-  public loginForm! : FormGroup
-  constructor(private toaster:ToastrService,private formBuilder: FormBuilder, private http : HttpClient, private router : Router) { }
+  public loginForm!: FormGroup
+  constructor(private toaster: ToastrService, private formBuilder: FormBuilder,
+    private http: HttpClient, private router: Router, private api: ApiService) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-email:[''],
-password:['']
+      email: [''],
+      password: ['']
     })
+    this.api.getEmployee().subscribe((x)=>{
+      debugger;
+    });
   }
 
-  login(){
-this.http.get<any>("http://localhost:3000/signupUsers")
-.subscribe(res=>{
-const user = res.find((a:any)=>{
-return a.email === this.loginForm.value.email  &&  a.password === this.loginForm.value.password
-});
-if(user){
-  alert('login success');
-  this.loginForm.reset();
-  this.router.navigate(['career'])
-}else{
-  alert('user not found');
-}
-},err=>{
-  this.toaster.error('something went wrong');
-  alert('something went wrong');
-})
+  login() {
+
+    this.api.getEmployee()
+      .subscribe(res => {
+        const user = res.posts.find((a: any) => {
+          return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
+        });
+        if (user) {
+          alert('login success');
+          this.loginForm.reset();
+          this.router.navigate(['home'])
+        } else {
+          alert('user not found');
+        }
+      }, err => {
+        this.toaster.error('something went wrong');
+        alert('something went wrong');
+      })
   }
 }

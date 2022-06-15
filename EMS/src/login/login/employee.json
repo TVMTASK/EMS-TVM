@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "nandhini",
+      "relationship": "sister",
+      "age": "26",
+      "occupation": "software",
+      "email":"software",
+      "password":"software"
+    },
+    {
+      "id": 3,
+      "name": "dhana",
+      "relationship": "sister",
+      "age": "26",
+      "occupation": "administror"
+    },
+    {
+      "id": 4,
+      "name": "bhavani",
+      "relationship": "mother",
+      "age": "56",
+      "occupation": "housewife"
+    },
+    {
+      "id": 5,
+      "name": "tjdyj",
+      "relationship": "dyjdtyj",
+      "age": "ydyjyt",
+      "occupation": "yjy"
+    },
+    {
+      "id": 6,
+      "name": "nandhini",
+      "relationship": "dsf",
+      "age": "sdf",
+      "occupation": "sdfsdf"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

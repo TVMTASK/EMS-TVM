@@ -8,20 +8,18 @@
             </a>
         </div>
         <div class="col col-lg-3 text-white py-lg-4">
-               <ul><li><h4>Yogarani B</h4></li>
+               <ul><li><h4>{{basicInfo.firstName+ " "+basicInfo.middleName+" "+basicInfo.lastName}}</h4></li>
                      
-                        <li>Senior Engineer </li>
-                    <h5> <li> - Product and Platform Engineering(INPS1118)</li>
-                        <li> - Product and Platform Engineering(PPENG)</li>
-                        <li> - Product and Platform Engineering(PROD & PLATFORM)</li>
-                        <li>Chennai (IND-2) (ASIA/KOLKATA)</li>
+                        <li>{{basicInfo.title}} </li>
+                    <h5> <li *ngFor="let domain of domains"> {{domain.domain+" ("+domain.code+")"}}</li>
+                        <li>{{contactInfo.Location}}</li>
                         <li>Local Time: {{date | date:'medium'}}</li>
-                        <li>Business Phone: (91)-9999999999</li>
+                        <li>Business Phone: {{contactInfo.BusinessPhone}}</li>
                     </h5>
               </ul>
           </div>
         <div class="col col-lg-3 text-white pt-lg-5 p-0 m-0">
-            <h5> Senior Software Developer with good hands on experience on JAVA and ANGULAR</h5>
+            <h5> {{basicInfo.expSummary}}</h5>
         </div>
         <div id="links" class="col col-lg-4 text-white px-lg-5 pt-lg-4 p-0 m-0">
             <ul>
@@ -49,27 +47,33 @@
     </div>
 </div>
 <div class="border">
-<ul class="nav nav-tabs nav-fill tabBg" id="myTab" role="tablist">
+  <ul class="nav navbar tabBg" id="myTab">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="genInfo-tab" data-bs-toggle="dropdown" href="#genInfo" role="tab" aria-haspopup="true" aria-expanded="false" aria-selected="true">GENERAL INFORMATION</a>
+      <div class="dropdown-menu ">
+        <a class="dropdown-item text-dark" href="#genInfo"  data-bs-toggle="tab" role="tab">User Info</a>
+        <a class="dropdown-item text-dark" href="#genInfo"  data-bs-toggle="tab" role="tab">Badges</a>
+        <a class="dropdown-item text-dark" href="#genInfo"  data-bs-toggle="tab" role="tab">Org Charts & Tags</a>
+      </div>
+    </li>
+  
   <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#genInfo" role="tab" aria-controls="generalInfo" aria-selected="true">GENERAL INFORMATION</a>
+    <a class="nav-link" id="personalInfo-tab" data-bs-toggle="tab" href="#personalInfo" role="tab" aria-controls="personalInfo" aria-selected="false">PERSONAL INFORMATION</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#personalInfo" role="tab" aria-controls="personalInfo" aria-selected="false">PERSONAL INFORMATION</a>
+    <a class="nav-link" id="career-tab" data-bs-toggle="tab" href="#career" role="tab" aria-controls="career" aria-selected="false">CAREER</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#career" role="tab" aria-controls="career" aria-selected="false">CAREER</a>
+    <a class="nav-link" id="employmentInfo-tab" data-bs-toggle="tab" href="#employmentInfo" role="tab" aria-controls="employmentInfo" aria-selected="false">EMPLOYMENT INFORMATION</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#employmentInfo" role="tab" aria-controls="employmentInfo" aria-selected="false">EMPLOYMENT INFORMATION</a>
+    <a class="nav-link" id="timeOffInfo-tab" data-bs-toggle="tab" href="#timeOffInfo" role="tab" aria-controls="timeOffInfo" aria-selected="false">TIMEOFF INFORMATION</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#timeOffInfo" role="tab" aria-controls="timeOffInfo" aria-selected="false">TIMEOFF INFORMATION</a>
+    <a class="nav-link" id="rewards-tab" data-bs-toggle="tab" href="#rewards" role="tab" aria-controls="totalRewards" aria-selected="false">TOTAL REWARDS</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#rewards" role="tab" aria-controls="totalRewards" aria-selected="false">TOTAL REWARDS</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#bankDetails" role="tab" aria-controls="bankDetails" aria-selected="false">BANK DETAILS</a>
+    <a class="nav-link" id="bankDetails-tab" data-bs-toggle="tab" href="#bankDetails" role="tab" aria-controls="bankDetails" aria-selected="false">BANK DETAILS</a>
   </li>
 </ul>
   <div class="tab-content" id="myTabContent">
@@ -89,7 +93,7 @@
                   <h5>First Name</h5>
                 </div>
                 <div class="col">
-                  <h5>Yogarani</h5>
+                  <h5>{{basicInfo.firstName}}</h5>
                 </div>
               </div>
               <div class="row">
@@ -97,7 +101,7 @@
                   <h5>Middle Name</h5>
                 </div>
                 <div class="col">
-                  <h5>-</h5>
+                  <h5>{{basicInfo.middleName}}</h5>
                 </div>
               </div>
               <div class="row">
@@ -105,7 +109,7 @@
                   <h5>Last Name</h5>
                 </div>
                 <div class="col">
-                  <h5>B</h5>
+                  <h5>{{basicInfo.lastName}}</h5>
                 </div>
               </div>
               <div class="row">
@@ -113,7 +117,7 @@
                   <h5>User Name</h5>
                 </div>
                 <div class="col">
-                  <h5>byogarani</h5>
+                  <h5>{{basicInfo.userName}}</h5>
                 </div>
               </div>
               <div class="row">
@@ -121,7 +125,7 @@
                   <h5>Employee ID</h5>
                 </div>
                 <div class="col">
-                  <h5>AIPL2879</h5>
+                  <h5>{{basicInfo.employeeID}}</h5>
                 </div>
               </div>
               <div class="row">
@@ -129,7 +133,7 @@
                   <h5>Title</h5>
                 </div>
                 <div class="col">
-                  <h5>Senior Engineer - Product and Platform</h5>
+                  <h5>{{basicInfo.title +" "+ basicInfo.currentDomain}}</h5>
                 </div>
               </div>
             </div>
@@ -144,7 +148,7 @@
                   <h5>Address Line 1</h5>
                 </div>
                 <div class="col">
-                  <h5>Ascendas Internation tech park</h5>
+                  <h5>{{contactInfo.addressLine1}}</h5>
                 </div>
               </div>
               <div class="row">
@@ -152,7 +156,7 @@
                   <h5>Address Line 2</h5>
                 </div>
                 <div class="col">
-                  <h5>Phase 2 - Crest, 4th Floor, CSIR Road, Taramani.</h5>
+                  <h5>{{contactInfo.addressLine2}}</h5>
                 </div>
               </div>
               <div class="row">
@@ -160,7 +164,7 @@
                   <h5>City</h5>
                 </div>
                 <div class="col">
-                  <h5>Chennai</h5>
+                  <h5>{{contactInfo.city}}</h5>
                 </div>
               </div>
               <div class="row">
@@ -168,7 +172,7 @@
                   <h5>Zip</h5>
                 </div>
                 <div class="col">
-                  <h5>600113</h5>
+                  <h5>{{contactInfo.Zip}}</h5>
                 </div>
               </div>
               <div class="row">
@@ -176,7 +180,7 @@
                   <h5>Location</h5>
                 </div>
                 <div class="col">
-                  <h5>Chennai (IND-2)</h5>
+                  <h5>{{contactInfo.Location}}</h5>
                 </div>
               </div>
               <div class="row">
@@ -184,7 +188,7 @@
                   <h5>Business Phone</h5>
                 </div>
                 <div class="col">
-                  <h5>(91)7897897284</h5>
+                  <h5>{{contactInfo.BusinessPhone}}</h5>
                 </div>
               </div>
             </div>

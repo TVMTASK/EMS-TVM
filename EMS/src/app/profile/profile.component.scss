@@ -28,10 +28,10 @@ ul
     color: white;
     font-size: 12px;
 }
-.nav-item .active
+.nav-item .active, .dropdown-menu a:active
 {
-    color: #8914cc !important;
-    font-weight: bold;
+    font-size: 16px;
+   
 }
 
 .positionCenter

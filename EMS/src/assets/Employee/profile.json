@@ -1,0 +1,110 @@
+{
+    "basicInfo": [
+      {
+        "id":1,
+        "employeeID":"AIPL15424",
+        "firstName": "yogarani",
+        "middleName": "",
+        "lastName": "B",
+        "userName":"byogarani",
+        "title":"Senior Engineer",
+        "currentDomain":"Product and Platform",
+        "expSummary":"Senior Software Developer with good hands on experience on JAVA and ANGULAR"
+      },
+      {
+        "id":2,
+        "employeeID":"AIPL15425",
+        "firstName": "Jaya",
+        "middleName": "Sai",
+        "lastName": "R",
+        "userName":"JayaS",
+        "title":"Junior Engineer",
+        "currentDomain":"Product and Platform",
+        "expSummary":"Junior Software Developer with hands on experience on ANGULAR, REACT JS"
+      },
+      {
+        "id":3,
+        "employeeID":"AIPL15426",
+        "firstName": "Chris",
+        "middleName": "Mc",
+        "lastName": "Harris",
+        "userName":"chrisMC",
+        "title":"Manager",
+        "currentDomain":"Product and Platform",
+        "expSummary":"Extensive experience in handling multiple projects"
+      }
+     ],
+     "contactInfo": [
+      {
+        "id":1,
+        "employeeID":"AIPL15426",
+        "addressLine1":"Ascendas Internation tech park",
+        "addressLine2":"Phase 2 - Crest, 4th Floor, CSIR Road, Taramani.",
+        "city":"Chennai",
+        "Zip":600113,
+        "Location":"Chennai (IND-2)",
+        "BusinessPhone":919898987823
+      },
+      {
+        "id":2,
+        "employeeID":"AIPL15424",
+        "addressLine1":"SIPCOT ",
+        "addressLine2":"Phase 1 ,Rajiv salai - OMR Lane",
+        "city":"Chennai",
+        "Zip":600001,
+        "Location":"Chennai SIRUSERI",
+        "BusinessPhone":917897826554
+      },
+      {
+        "id":3,
+        "employeeID":"AIPL15425",
+        "addressLine1":"ELCOT",
+        "addressLine2":"Block 3 main lane",
+        "city":"Chennai",
+        "Zip":600210,
+        "Location":"Chennai ELCOT",
+        "BusinessPhone":9178978264
+      }
+     ],
+     "domains": [
+      {
+        "id":1,
+        "employeeID":"AIPL15425",
+        "domain": "Product and Platform Engineering",
+        "code":"INPS1118"
+      },
+      {
+        "id":2,
+        "employeeID":"AIPL15425",
+        "domain": "Product and Platform Engineering",
+        "code":"PPENG"
+      },
+      {
+        "id":3,
+        "employeeID":"AIPL15425",
+        "domain": "Product and Platform Engineering",
+        "code":"PROD & PLATFORM"
+      },
+      { 
+        "id":4,
+        "employeeID":"AIPL15424",
+        "domain": "Product and Platform Engineering",
+        "code":"INC67"
+      },
+      { 
+        "id":5,
+        "employeeID":"AIPL15424",
+        "domain": "Product and Platform Engineering",
+        "code":"PROD"
+      },
+      {
+        "id":6,
+        "employeeID":"AIPL15426",
+        "domain": "Product Engineering",
+        "code":"PLATFORM"
+      }
+
+    ]
+
+
+  }

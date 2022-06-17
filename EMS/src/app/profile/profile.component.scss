@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 .headProfile
 {
     width:100%;
@@ -30,13 +34,12 @@ ul
 }
 .nav-item .active, .dropdown-menu a:active
 {
-    font-size: 16px;
+    font-size: 15px;
    
 }
 
 .positionCenter
 {
-  position: absolute;
-  bottom: 60px;
-  left:100px;
+  position: relative;
+  top:30px;
 }

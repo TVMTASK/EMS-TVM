@@ -8,12 +8,13 @@ import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
+
  { path: 'login', component: LoginComponent },
  {path: 'signup', component:SignupComponent},
  {path: 'career', component:CareerComponent},
  {path:'profile',component:ProfileComponent},
  {path:'home',component:HomeComponent},
-  {path:'',pathMatch:'full',redirectTo:'login'}
+ {path:'',pathMatch:'full',redirectTo:'login'},
 ];
 
 @NgModule({

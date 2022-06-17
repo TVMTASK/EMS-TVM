@@ -14,7 +14,6 @@ export class ApiService {
     const profileURL="/assets/Employee/profile.json";
     return this.http.get<any>(profileURL).pipe(map((res:any)=>
     {
-
       return res;
     }))
   }

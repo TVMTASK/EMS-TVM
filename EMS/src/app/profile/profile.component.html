@@ -47,46 +47,74 @@
     </div>
 </div>
 <div class="border">
-  <ul class="nav navbar tabBg" id="myTab">
+  <ul class="nav navbar nav-fill tabBg" id="myTab">
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="genInfo-tab" data-bs-toggle="dropdown" href="#genInfo" role="tab" aria-haspopup="true" aria-expanded="false" aria-selected="true">GENERAL INFORMATION</a>
       <div class="dropdown-menu ">
-        <a class="dropdown-item text-dark" href="#genInfo"  data-bs-toggle="tab" role="tab">User Info</a>
-        <a class="dropdown-item text-dark" href="#genInfo"  data-bs-toggle="tab" role="tab">Badges</a>
-        <a class="dropdown-item text-dark" href="#genInfo"  data-bs-toggle="tab" role="tab">Org Charts & Tags</a>
+        <a class="dropdown-item text-dark" href="/profile/#userInfo"  data-bs-toggle="link" role="tab">User Info</a>
+        <a class="dropdown-item text-dark" href="/profile/#badges"  data-bs-toggle="link" role="tab">Badges</a>
+        <a class="dropdown-item text-dark" href="/profile/#orgCharts"  data-bs-toggle="link" role="tab">Org Charts & Tags</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="personalInfo-tab" data-bs-toggle="dropdown" href="#personalInfo" role="tab" aria-haspopup="true" aria-expanded="false" aria-selected="false">PERSONAL INFORMATION</a>
+      <div class="dropdown-menu ">
+        <a class="dropdown-item text-dark" href="#personalInfo"  data-bs-toggle="tab" role="tab">Biographical Information</a>
+        <a class="dropdown-item text-dark" href="#personalInfo"  data-bs-toggle="tab" role="tab">Personal Information</a>
+        <a class="dropdown-item text-dark" href="#personalInfo"  data-bs-toggle="tab" role="tab">Contacts & Addresses</a>
+        <a class="dropdown-item text-dark" href="#personalInfo"  data-bs-toggle="tab" role="tab">Emergency Contact & Dependents</a>
+        <a class="dropdown-item text-dark" href="#personalInfo"  data-bs-toggle="tab" role="tab">National ID</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="career-tab" data-bs-toggle="dropdown" href="#career" role="tab" aria-haspopup="true" aria-expanded="false" aria-selected="false">CAREER</a>
+      <div class="dropdown-menu ">
+        <a class="dropdown-item text-dark" href="#career"  data-bs-toggle="tab" role="tab">Education & Honors</a>
+        <a class="dropdown-item text-dark" href="#career"  data-bs-toggle="tab" role="tab">Work Experience</a>
+        <a class="dropdown-item text-dark" href="#career"  data-bs-toggle="tab" role="tab">Courses & Certifications</a>
+        <a class="dropdown-item text-dark" href="#career"  data-bs-toggle="tab" role="tab">Activities</a>
+        <a class="dropdown-item text-dark" href="#career"  data-bs-toggle="tab" role="tab">Language Proficiency</a>
+      </div>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" id="employmentInfo-tab" data-bs-toggle="dropdown" href="#employmentInfo" role="tab" aria-haspopup="true" aria-expanded="false" aria-selected="false">EMPLOYMENT INFORMATION</a>
+      <div class="dropdown-menu ">
+        <a class="dropdown-item text-dark" href="#employmentInfo"  data-bs-toggle="tab" role="tab">Employment Details</a>
+        <a class="dropdown-item text-dark" href="#employmentInfo"  data-bs-toggle="tab" role="tab">Job Information</a>
+        <a class="dropdown-item text-dark" href="#employmentInfo"  data-bs-toggle="tab" role="tab">Job Relationship</a>
+        <a class="dropdown-item text-dark" href="#employmentInfo"  data-bs-toggle="tab" role="tab">Organization Information</a>
       </div>
     </li>
   
   <li class="nav-item">
-    <a class="nav-link" id="personalInfo-tab" data-bs-toggle="tab" href="#personalInfo" role="tab" aria-controls="personalInfo" aria-selected="false">PERSONAL INFORMATION</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="career-tab" data-bs-toggle="tab" href="#career" role="tab" aria-controls="career" aria-selected="false">CAREER</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="employmentInfo-tab" data-bs-toggle="tab" href="#employmentInfo" role="tab" aria-controls="employmentInfo" aria-selected="false">EMPLOYMENT INFORMATION</a>
-  </li>
-  <li class="nav-item">
     <a class="nav-link" id="timeOffInfo-tab" data-bs-toggle="tab" href="#timeOffInfo" role="tab" aria-controls="timeOffInfo" aria-selected="false">TIMEOFF INFORMATION</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" id="rewards-tab" data-bs-toggle="tab" href="#rewards" role="tab" aria-controls="totalRewards" aria-selected="false">TOTAL REWARDS</a>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" id="rewards-tab" data-bs-toggle="dropdown" href="#rewards" role="tab" aria-haspopup="true" aria-expanded="false" aria-selected="false">TOTAL REWARDS</a>
+    <div class="dropdown-menu ">
+      <a class="dropdown-item text-dark" href="#rewards"  data-bs-toggle="tab" role="tab">Compensation Information</a>
+      <a class="dropdown-item text-dark" href="#rewards"  data-bs-toggle="tab" role="tab">Non Recurring Payments</a>
+      <a class="dropdown-item text-dark" href="#rewards"  data-bs-toggle="tab" role="tab">Statements</a>
+    </div>
   </li>
+
   <li class="nav-item">
     <a class="nav-link" id="bankDetails-tab" data-bs-toggle="tab" href="#bankDetails" role="tab" aria-controls="bankDetails" aria-selected="false">BANK DETAILS</a>
   </li>
 </ul>
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="genInfo" role="tabpanel" aria-labelledby="genInfo-tab">
-      <div class="row p-lg-2 g-2">
+      <div class="row p-lg-2 g-2"  id="userInfo">
         <div class="col-12 col-lg-4">
-          <div class="card border-0 p-lg-5 positionCenter">
+          <div class="card border-0 p-2 p-lg-5 positionCenter">
           <h4><b>User Info</b></h4>   
           </div>          
         </div>
         <div class="col-12 col-lg-4">
-          <div class="card bg-light"> 
-            <div class="card-header pb-0"><h4> Basic Information</h4></div>
+          <div class="card bg-light h-100"> 
+            <div class="card-header pb-0 "><h4> Basic Information</h4></div>
             <div class="card-body">
               <div class="row">
                 <div class="col">
@@ -97,7 +125,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col fw-semibold">
+                <div class="col">
                   <h5>Middle Name</h5>
                 </div>
                 <div class="col">
@@ -140,7 +168,7 @@
         </div>
         </div>
         <div class="col-12 col-lg-4">
-          <div class="card bg-light"> 
+          <div class="card bg-light  h-100"> 
             <div class="card-header pb-0"><h4> Contact Information</h4></div>
             <div  class="card-body">
               <div class="row">
@@ -193,6 +221,30 @@
               </div>
             </div>
            </div>
+        </div>
+      </div>
+      <div class="row p-lg-2 g-2" id="badges">
+        <div class="col-12 col-lg-4">
+          <div class="card border-0 p-2 p-lg-5 positionCenter">
+          <h4><b>Badges</b></h4>   
+          </div>          
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="card bg-light p-2 p-lg-5 positionCenter">
+          <h5>No badges yet.</h5>   
+          </div>          
+        </div>
+      </div> 
+      <div class="row p-lg-2 g-2" id="orgCharts">
+        <div class="col-12 col-lg-4">
+          <div class="card border-0 p-2 p-lg-5 positionCenter">
+          <h4><b>Org Charts & Tags</b></h4>   
+          </div>          
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="card bg-light p-2 p-lg-5 positionCenter">
+          <h5>No charts for view.</h5>   
+          </div>          
         </div>
       </div>
     </div>

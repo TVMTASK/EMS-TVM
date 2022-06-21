@@ -8,10 +8,15 @@ import { ApiService } from '../api.service';
 })
 export class ProfileComponent implements OnInit {
   date=new Date();
-  empID="AIPL15425";
+  empID="AIPL15426";
   basicInfo:any="";
   contactInfo:any="";
   domains:any[]=[];
+  dependents:any[]=[];
+  totalDependents=0;
+  showMoreDependents=false;
+  showDependentsButton=false;
+  hideDependentsButton=false;
 
   constructor(private api:ApiService) {
     
@@ -28,7 +33,22 @@ export class ProfileComponent implements OnInit {
             
             return this.basicInfo=userRec;
           };
+        }),
+        profileData.dependents.find((userRec:any)=>
+        {
+          if(userRec.employeeID===this.empID)
+          {
+            console.log("user Record of dependent==>"+userRec.dependentFName)
+    
+            this.dependents.push(userRec); 
+          }
         });
+        this.totalDependents=this.dependents.length;
+        if(this.totalDependents>1)
+        {
+          this.showDependentsButton=true;
+        }
+      
       })
       this.api.getEmpProfile().subscribe(profileData=>
         {
@@ -56,6 +76,19 @@ export class ProfileComponent implements OnInit {
              );
           })
         
+  }
+
+  showDependents()
+  {
+    this.showMoreDependents=true;
+    this.showDependentsButton=false;
+    this.hideDependentsButton=true;
+  }
+  hideDependents()
+  {
+    this.showMoreDependents=false;
+    this.showDependentsButton=true;
+    this.hideDependentsButton=false;
   }
 
 }

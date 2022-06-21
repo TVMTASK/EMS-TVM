@@ -49,7 +49,7 @@
 <div class="border">
   <ul class="nav navbar nav-fill tabBg" id="myTab">
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="genInfo-tab" data-bs-toggle="dropdown" href="#genInfo" role="tab" aria-haspopup="true" aria-expanded="false" aria-selected="true">GENERAL INFORMATION</a>
+      <a class="nav-link dropdown-toggle" id="genInfo-tab" data-bs-toggle="dropdown" href="#genInfo" role="tab" aria-haspopup="true" aria-expanded="false" aria-selected="false">GENERAL INFORMATION</a>
       <div class="dropdown-menu ">
         <a class="dropdown-item text-dark" href="/profile/#userInfo"  data-bs-toggle="link" role="tab">User Info</a>
         <a class="dropdown-item text-dark" href="/profile/#badges"  data-bs-toggle="link" role="tab">Badges</a>
@@ -57,7 +57,7 @@
       </div>
     </li>
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="personalInfo-tab" data-bs-toggle="dropdown" href="#personalInfo" role="tab" aria-haspopup="true" aria-expanded="false" aria-selected="false">PERSONAL INFORMATION</a>
+      <a class="nav-link dropdown-toggle" id="personalInfo-tab" data-bs-toggle="dropdown" href="#personalInfo" role="tab" aria-haspopup="true" aria-expanded="false" aria-selected="true">PERSONAL INFORMATION</a>
       <div class="dropdown-menu ">
         <a class="dropdown-item text-dark" href="#personalInfo"  data-bs-toggle="tab" role="tab">Biographical Information</a>
         <a class="dropdown-item text-dark" href="#personalInfo"  data-bs-toggle="tab" role="tab">Personal Information</a>
@@ -165,7 +165,7 @@
                 </div>
               </div>
             </div>
-        </div>
+         </div>
         </div>
         <div class="col-12 col-lg-4">
           <div class="card bg-light  h-100"> 
@@ -216,13 +216,14 @@
                   <h5>Business Phone</h5>
                 </div>
                 <div class="col">
-                  <h5>{{contactInfo.BusinessPhone}}</h5>
+                  <h5>{{contactInfo.businessPhone}}</h5>
                 </div>
               </div>
             </div>
            </div>
         </div>
       </div>
+      <hr class="divider" />
       <div class="row p-lg-2 g-2" id="badges">
         <div class="col-12 col-lg-4">
           <div class="card border-0 p-2 p-lg-5 positionCenter">
@@ -235,6 +236,8 @@
           </div>          
         </div>
       </div> 
+      <br>
+      <hr class="divider"/>
       <div class="row p-lg-2 g-2" id="orgCharts">
         <div class="col-12 col-lg-4">
           <div class="card border-0 p-2 p-lg-5 positionCenter">
@@ -248,7 +251,544 @@
         </div>
       </div>
     </div>
-    <div class="tab-pane fade" id="personalInfo" role="tabpanel" aria-labelledby="personalInfo-tab">PI</div>
+    <!--personal information-->
+    <div class="tab-pane fade" id="personalInfo" role="tabpanel" aria-labelledby="personalInfo-tab">
+      <div class="row p-lg-2 g-2"  id="personalInfo">
+        <div class="col-12 col-lg-4">
+          <div class="card border-0 p-2 p-lg-5 positionCenter">
+          <h4><b>Personal Information</b></h4>   
+          </div>          
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="card bg-light h-100"> 
+            <div class="card-header pb-0 "><h4> Personal Information
+               <a href="#" class="ps-3 text-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                          <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                        </svg>
+                     </a>
+                     <a href="#" class="ps-3 text-dark">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                    </svg>
+                    </a>
+                    </h4>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col col-lg-3">
+                  <h5>Salutation</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.salutation}}</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>Nationality</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.nationality}}</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-lg-3">
+                  <h5>First Name</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.firstName}}</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>Native Preferred Language</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.nativePreferredLanguage}}</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-lg-3">
+                  <h5>Middle Name</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.middleName}}</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>Challenge Status</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.challangeStatus}}</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-lg-3">
+                  <h5>Last Name</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.lastName}}</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>Certificate Start Date</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.certificationStartDate}}</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-lg-3">
+                  <h5>Display Name</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.firstName+" "+basicInfo.lastName}}</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>Certificate End Date</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.certificationEndDate}}</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-lg-3">
+                  <h5>Initials</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.initials}}</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>Attachment</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.attachment}}</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-lg-3">
+                  <h5>Gender</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.gender}}</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>Primary Skills</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.primarySkills}}</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-lg-3">
+                  <h5>Marital Status</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.maritalStatus}}</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>Secondary Skills</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.secondarySkills}}</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-lg-3">
+                  <h5>Marital Status Since</h5>
+                </div>
+                <div class="col col-lg-3">
+                  <h5>{{basicInfo.maritalStatusSince}}</h5>
+                </div>
+              </div>
+            </div>
+            <div class="ps-3 "><h4> Basic Information</h4></div>
+            <div class="card-body">
+            <div class="row">
+              <div class="col col-lg-3">
+                <h5>Name of Father</h5>
+              </div>
+              <div class="col col-lg-3">
+                <h5>{{basicInfo.fatherName}}</h5>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col col-lg-3">
+                <h5>Date Learned</h5>
+              </div>
+              <div class="col col-lg-3">
+                <h5>{{basicInfo.dateLearned}}</h5>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col col-lg-3">
+                <h5>Challenge Group</h5>
+              </div>
+              <div class="col col-lg-3">
+                <h5>{{basicInfo.challengeGroup}}</h5>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col col-lg-3">
+                <h5>Degree of Challenge</h5>
+              </div>
+              <div class="col col-lg-3">
+                <h5>{{basicInfo.degreeChallenge}}</h5>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col col-lg-3">
+                <h5>Type of Challenge</h5>
+              </div>
+              <div class="col col-lg-3">
+                <h5>{{basicInfo.typeChallenge}}</h5>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col col-lg-3">
+                <h5>Issuing Authority</h5>
+              </div>
+              <div class="col col-lg-3">
+                <h5>{{basicInfo.issueAuthority}}</h5>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col col-lg-3">
+                <h5>Reference Number</h5>
+              </div>
+              <div class="col col-lg-3">
+                <h5>{{basicInfo.referenceNumber}}</h5>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col col-lg-3">
+                <h5>Religion</h5>
+              </div>
+              <div class="col col-lg-3">
+                <h5>{{basicInfo.religion}}</h5>
+              </div>
+             </div>
+             <div class="row">
+              <div class="col col-lg-3">
+                <h5>Blood Group</h5>
+              </div>
+              <div class="col col-lg-3">
+                <h5>{{basicInfo.bloodGroup}}</h5>
+              </div>
+             </div>
+             </div>
+            </div>
+         </div>
+        </div>
+        <hr class="divider" />
+        <!--contact info-->
+        <div class="row p-lg-2 g-2"  id="contAddress">
+          <div class="col-12 col-lg-4">
+            <div class="card border-0 p-2 p-lg-5 positionCenter">
+            <h4><b>Addresses </b></h4>   
+            </div>          
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card bg-light h-100"> 
+              <div class="card-header pb-0 "><h4> Contact Information
+                <a href="#" class="ps-3 text-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                </svg>
+             </a>
+            </h4></div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5>Business</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{contactInfo.businessEmail}}</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h5>Personal</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{contactInfo.personalEmail}}</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h5>Business</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{contactInfo.businessPhone}}</h5>
+                  </div>
+                </div>
+              </div>
+           </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card bg-light  h-100"> 
+              <div class="card-header pb-0"><h4> Addresses
+                <a href="#" class="ps-3 text-dark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                  </svg>
+               </a>
+               <a href="#" class="ps-3 text-dark">
+               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+              </svg>
+              </a>
+              </h4></div>
+              <div  class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5>Permanent</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{contactInfo.permHomeAddress}}
+                    </h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h5>Home</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{contactInfo.homeAddress}}
+                    </h5>
+                  </div>
+                </div>
+                </div>
+               </div>
+          </div>
+        </div>
+        <hr class="divider" />
+        <!--Emergency contact and Dependents-->
+        <div class="row p-lg-2 g-2"  id="contAddress">
+          <div class="col-12 col-lg-4">
+            <div class="card border-0 p-2 p-lg-5 positionCenter">
+            <h4><b>Emergency contact and Dependents</b></h4>   
+            </div>          
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card bg-light h-100"> 
+              <div class="card-header pb-0 "><h4> Primary Emergency Contact
+                <a href="#" class="ps-3 text-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                </svg>
+             </a>
+            </h4></div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5>Name</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{contactInfo.emerContactName}}</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h5>Relationship</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{contactInfo.emerRelationship}}</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h5>Phone</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{contactInfo.emerPhone}}</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h5>Dependent</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{contactInfo.emerDependent}}</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h5>Emergency Contact</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{contactInfo.emerContact}}</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h5>Details <a href="#" class="ps-1 text-dark">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                      </svg>
+                   </a></h5>
+                  </div>
+                </div>
+              </div>
+           </div>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="card bg-light  h-100"> 
+              <div class="card-header pb-0"><h4> Dependents
+                <a href="#" class="ps-3 text-dark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                  </svg>
+               </a>
+               <a href="#" class="ps-3 text-dark">
+               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+              </svg>
+              </a>
+              </h4>
+            </div>
+
+              <div  class="card-body">
+                <div class="row" >
+                  <div class="col">
+                    <h5>Effective as of.{{dependents[totalDependents-1].effectiveDate}}</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h5>First Name</h5>
+                  </div>
+                  <div class="col">
+                    <h5>{{dependents[0].dependentFName}}</h5>
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h5>Last Name</h5>
+                    </div>
+                    <div class="col">
+                      <h5>{{dependents[0].dependentLName}}</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h5>Middle Name</h5>
+                    </div>
+                    <div class="col">
+                      <h5>{{dependents[0].dependentMName}}</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h5>Relationship</h5>
+                    </div>
+                    <div class="col">
+                      <h5>{{dependents[0].dependentRelationship}}</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h5>Date of Birth</h5>
+                    </div>
+                    <div class="col">
+                      <h5>{{dependents[0].dependentDOB}}</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h5>Attachments</h5>
+                    </div>
+                    <div class="col">
+                      <h5>-</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h5>Details <a href="#" class="ps-1 text-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                          <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                        </svg>
+                     </a></h5>
+                    </div>
+                  </div>
+                  <span *ngIf="showMoreDependents">
+                    <div class="pb-lg-4"  *ngFor="let dependent of dependents; let i=index">
+                      <span *ngIf="i>0">
+                    <div class="row">
+                      <div class="col">
+                        <h5>First Name</h5>
+                      </div>
+                      <div class="col">
+                        <h5>{{dependent.dependentFName}}</h5>
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <h5>Last Name</h5>
+                        </div>
+                        <div class="col">
+                          <h5>{{dependent.dependentLName}}</h5>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <h5>Middle Name</h5>
+                        </div>
+                        <div class="col">
+                          <h5>{{dependent.dependentMName}}</h5>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <h5>Relationship</h5>
+                        </div>
+                        <div class="col">
+                          <h5>{{dependent.dependentRelationship}}</h5>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <h5>Date of Birth</h5>
+                        </div>
+                        <div class="col">
+                          <h5>{{dependent.dependentDOB}}</h5>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <h5>Attachments</h5>
+                        </div>
+                        <div class="col">
+                          <h5>-</h5>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <h5>Details <a href="#" class="ps-1 text-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                              <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                            </svg>
+                         </a></h5>
+                        </div>
+                      </div>
+                    </span>
+                  </div>
+                  </span>
+                  <!--more and less buttons-->
+                
+                  <div class="row pt-lg-3">
+                    <div class="col" *ngIf="showDependentsButton"><button (click)="showDependents()" class="border-0 bg-light text-dark"><h5>{{totalDependents-1 +" more"}}</h5></button>
+                      
+                    </div>
+                    <div class="col" *ngIf="hideDependentsButton"><button (click)="hideDependents()" class="border-0 bg-light text-dark"><h5>Hide dependents</h5></button></div>
+                  </div>
+                </div>
+               </div>           
+          </div>
+        </div>
+        <div class="row pt-lg-3 justify-content-end">
+          <div class="col-4"><h5><a href="#" class="text-decoration-none text-dark">Show More</a></h5>
+          </div>
+        </div>
+    </div>
+    <hr class="divider" />
     <div class="tab-pane fade" id="career" role="tabpanel" aria-labelledby="career-tab">C</div>
     <div class="tab-pane fade" id="employmentInfo" role="tabpanel" aria-labelledby="employmentInfo-tab">EI</div>
     <div class="tab-pane fade" id="timeOffInfo" role="tabpanel" aria-labelledby="timeOff-tab">TOI</div>

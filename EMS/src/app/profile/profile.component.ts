@@ -11,6 +11,7 @@ export class ProfileComponent implements OnInit {
   empID="AIPL15426";
   basicInfo:any="";
   contactInfo:any="";
+  empDetails:any="";
   domains:any[]=[];
   dependents:any[]=[];
   totalDependents=0;
@@ -25,7 +26,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.api.getEmpProfile().subscribe(profileData=>
       {
-        //console.log(basicInfoData);
+        //console.log(this.date);
         this.basicInfo=profileData.basicInfo.find((userRec:any)=>
         {
           if( userRec.employeeID===this.empID)
@@ -34,11 +35,13 @@ export class ProfileComponent implements OnInit {
             return this.basicInfo=userRec;
           };
         }),
+        //pulling dependents records
+
         profileData.dependents.find((userRec:any)=>
         {
           if(userRec.employeeID===this.empID)
           {
-            console.log("user Record of dependent==>"+userRec.dependentFName)
+           // console.log("user Record of dependent==>"+userRec.dependentFName)
     
             this.dependents.push(userRec); 
           }
@@ -48,8 +51,17 @@ export class ProfileComponent implements OnInit {
         {
           this.showDependentsButton=true;
         }
+        //Pulling emplyment details
+        profileData.employmentDetails.find((userRec:any)=>
+        {
+          if(userRec.employeeID===this.empID)
+          {
+            return this.empDetails=userRec;
+          }
+        })
       
       })
+      //pulling contact info records
       this.api.getEmpProfile().subscribe(profileData=>
         {
          
@@ -62,6 +74,7 @@ export class ProfileComponent implements OnInit {
             };
           });
         })
+        //pulling domain records
         this.api.getEmpProfile().subscribe(profileData=>
           {
            

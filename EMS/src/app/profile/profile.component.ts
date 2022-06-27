@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiService } from '../api.service';
 })
 export class ProfileComponent implements OnInit {
   date=new Date();
-  empID="AIPL15426";
+  empID="";
   basicInfo:any="";
   contactInfo:any="";
   empDetails:any="";
@@ -19,19 +20,25 @@ export class ProfileComponent implements OnInit {
   showDependentsButton=false;
   hideDependentsButton=false;
 
-  constructor(private api:ApiService) {
+
+  constructor(private activatedRoute: ActivatedRoute,private api:ApiService) {
     
    }
 
   ngOnInit(): void {
+
+    this.activatedRoute.params.subscribe(data =>
+      {
+        this.empID=data['id'];
+
+      });
     this.api.getEmpProfile().subscribe(profileData=>
       {
         //console.log(this.date);
         this.basicInfo=profileData.basicInfo.find((userRec:any)=>
         {
           if( userRec.employeeID===this.empID)
-          {
-            
+          {         
             return this.basicInfo=userRec;
           };
         }),

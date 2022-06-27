@@ -13,7 +13,7 @@ const routes: Routes = [
  { path: 'login', component: LoginComponent },
  {path: 'signup', component:SignupComponent},
  {path: 'career', component:CareerComponent},
- {path:'profile',component:ProfileComponent,canActivate:[AuthGuard]},
+ {path:'profile/:id',component:ProfileComponent,canActivate:[AuthGuard]},
  {path:'home',component:HomeComponent},
  {path:'**',component:LoginComponent}
 ];

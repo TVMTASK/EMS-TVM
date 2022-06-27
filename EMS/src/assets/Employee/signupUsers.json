@@ -1,0 +1,32 @@
+{
+    "posts": [
+      {
+        "id": 2,
+        "fullname": "Priya",
+        "Mobile Number": "9790389083",
+        "email":"rathipriya16@gmail.com",
+        "password":"password"
+      },
+      {
+        "id": 1,
+        "fullname": "Jaya Sai",
+        "Mobile Number": "9339872937",
+        "email":"JSR17@gmail.com",
+        "password":"jaya"
+      },
+      {
+        "id": 3,
+        "fullname": "Chris",
+        "Mobile Number": "453646457",
+        "email":"chris@gmail.com",
+        "password":"chris"
+      },
+      {
+        "id": 4,
+        "fullname": "Jackai",
+        "Mobile Number": "856675666",
+        "email":"jack@gmail.com",
+        "password":"jack"
+      }
+    ]
+  }

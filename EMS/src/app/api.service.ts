@@ -18,4 +18,15 @@ export class ApiService {
     }))
   }
 
+  getCredentials()
+  {
+    const credentialsURL="/assets/Employee/signupUsers.json";
+    return this.http.get<any>(credentialsURL).pipe(map((res:any)=>
+    {
+      return res;
+    }))
+  }
+
+
+
 }
